@@ -83,19 +83,17 @@ function startGame() {
   overlay.classList.add("hidden");
 
   // 初期配置のツムを時間差の高さから落とす
+    // 初期配置のツムを横5列に並べて一気に落とす
+  const cols = 5;
+  const colWidth = (WIDTH - TSUM_RADIUS * 2) / (cols - 1);
   for (let i = 0; i < TSUM_COUNT; i++) {
-    spawnTsum(i * 18);
+    const col = i % cols;
+    const row = Math.floor(i / cols);
+    const x = TSUM_RADIUS + col * colWidth + (Math.random() - 0.5) * 10;
+    const yOffset = row * (TSUM_RADIUS * 2.1);
+    spawnTsum(yOffset, x);
   }
 
-  clearInterval(timerId);
-  timerId = setInterval(() => {
-    timeLeft--;
-    timeEl.textContent = timeLeft;
-    if (timeLeft <= 0) {
-      endGame();
-    }
-  }, 1000);
-}
 
 function endGame() {
   isPlaying = false;
