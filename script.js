@@ -35,7 +35,7 @@ const tsumImages = TSUM_CONFIG.map((cfg) => {
 
 // 物理エンジンの初期化
 const engine = Engine.create();
-engine.gravity.y = 1.2;
+engine.gravity.y = 3.2;
 
 // 壁と床を作成（画面上部から降ってくるため、左右の壁は高く設定）
 const wallOptions = { isStatic: true, friction: 0.1 };
