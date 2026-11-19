@@ -13,8 +13,8 @@ const shuffleBtn = document.getElementById("shuffleBtn");
 // ゲーム設定
 const WIDTH = canvas.width;
 const HEIGHT = canvas.height;
-const TSUM_RADIUS = 10;
-const TSUM_COUNT = 500;
+const TSUM_RADIUS = 6;
+const TSUM_COUNT = 1800;
 const GAME_DURATION = 60;
 
 // 使用する画像ファイルと、画像未設定時の代替カラー
