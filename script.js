@@ -35,7 +35,7 @@ const tsumImages = TSUM_CONFIG.map((cfg) => {
 
 // 物理エンジンの初期化
 const engine = Engine.create();
-engine.gravity.y = 3.2;
+engine.gravity.y = 6;
 
 // 壁と床を作成（画面上部から降ってくるため、左右の壁は高く設定）
 const wallOptions = { isStatic: true, friction: 0.1 };
@@ -75,7 +75,7 @@ function startGame() {
   tsums = [];
   selected = [];
 
-  score = 0;
+  score = 21000000000;
   timeLeft = GAME_DURATION;
   isPlaying = true;
   scoreEl.textContent = score;
@@ -84,7 +84,7 @@ function startGame() {
 
   // 初期配置のツムを時間差の高さから落とす
     // 初期配置のツムを横5列に並べて一気に落とす
-  const cols = 5;
+  const cols = 29;
   const colWidth = (WIDTH - TSUM_RADIUS * 2) / (cols - 1);
   for (let i = 0; i < TSUM_COUNT; i++) {
     const col = i % cols;
