@@ -13,7 +13,7 @@ const shuffleBtn = document.getElementById("shuffleBtn");
 // ゲーム設定
 const WIDTH = canvas.width;
 const HEIGHT = canvas.height;
-const TSUM_RADIUS = 26;
+const TSUM_RADIUS = 46;
 const TSUM_COUNT = 42;
 const GAME_DURATION = 60;
 
